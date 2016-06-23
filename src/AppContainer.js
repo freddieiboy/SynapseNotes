@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Dashboard from './components/Dashboard';
+import { $bg } from './components/colors';
 
-class App extends Component {
+class AppContainer extends Component {
   render() {
     return (
-      <View style={styles.App}>
+      <View style={styles.AppContainer}>
         <Dashboard />
       </View>
     )
   }
-}
+};
 
 const styles = StyleSheet.create({
-  App: {
+  AppContainer: {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    backgroundColor: '#1C272C'
+    backgroundColor: $bg
   }
 })
 
-export default App;
+export default AppContainer;

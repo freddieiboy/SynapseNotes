@@ -11,6 +11,15 @@ class Dashboard extends Component {
     let { height, width } = Dimensions.get('window');
     console.log(height, width);
   }
+  createGrid = () => {
+    //TODO: create grid and add first note
+    //TODO: parse out xpos and ypos possible
+    //TODO: create final grid object for notes
+    //TODO: set the buttons on the right and left.
+  }
+  setupNotesList = () => {
+    //TODO: go through grid list and add to this page.
+  }
   render() {
     const grid = this.props.grid;
     console.log(this.props.noteSize)
@@ -21,7 +30,8 @@ class Dashboard extends Component {
         </View>
         <Toolbar
           totalPossiblePoints={0}
-          totalNotes={0} />
+          totalNotes={0}
+          createGrid={this.createGrid} />
       </View>
     )
   }

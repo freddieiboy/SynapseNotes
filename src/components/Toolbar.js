@@ -8,13 +8,14 @@ export default class Toolbar extends Component {
       <View style={styles.Toolbar}>
         <Button
           containerStyle={styles.buttonContainerStyle}
-          style={styles.buttonStyle}>
-          Create Fam
+          style={styles.buttonStyle}
+          onPress={this.props.createGrid}>
+          Create Grid and Add Note
         </Button>
         <Button
           containerStyle={styles.buttonContainerStyle}
           style={styles.buttonStyle}>
-          Clear
+          Clear Grid
         </Button>
         <Text style={styles.infoText}>Current Notes: {this.props.totalNotes}</Text>
         <Text style={styles.infoText}>Max Notes: {this.props.totalPossiblePoints}</Text>

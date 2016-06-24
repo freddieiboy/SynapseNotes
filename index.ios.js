@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet } from 'react-native';
-import App from './src/App';
+import { View, Text, StyleSheet, AppRegistry } from 'react-native';
+import Dashboard from './src/components/Dashboard';
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
+import AppContainer from './src/AppContainer';
 
 class Synapsenotes extends Component {
   render() {
     return (
-      <App />
-    );
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 AppRegistry.registerComponent('Synapsenotes', () => Synapsenotes);
